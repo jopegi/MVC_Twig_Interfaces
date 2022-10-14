@@ -1,0 +1,15 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+    <div id='saludo'>
+        MVC Twig Básico
+    </div>
+    <div id='fecha'>
+        {{fecha|date('d/m/Y')}}
+    </div>
+    <div id='hora'>
+        {{fecha|date('H:i:s')}}
+    </div>
+    <div id='button'>
+        <a href="/lista" target="_parent"><button type="button" onlick>Tareas</button></a>
+    </div>
+{% endblock %}

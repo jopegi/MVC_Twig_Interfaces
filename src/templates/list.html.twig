@@ -1,0 +1,26 @@
+{% extends "index.html.twig" %}
+{% block content %}
+    {% if resultados is null %}
+        0 results
+        <a href="/">Volver</a>
+    {% else %}
+        <a href="/">Volver</a>
+        <table border='1'>
+        <tr>
+            <td>Título</td>
+            <td>Descripción</td>
+            <td>Fecha de Creación</td>
+            <td>Fecha de Vencimiento</td>
+        </tr>
+        {% for row in resultados %}
+            <tr>
+                <td><a href='/detalle/{{row.id}}'>{{row.titulo|capitalize}}</a></td>
+                <td>{{row.descripcion|capitalize}}</td>
+                <td>{{row.fecha_creacion|date('d/m/Y')}}</td>
+                <td>{{row.fecha_vencimiento|date('d/m/Y')}}</td>
+            </tr>
+        {% endfor %}
+        </table>    
+        <a href="/">Volver</a>
+    {% endif %}
+{% endblock %}

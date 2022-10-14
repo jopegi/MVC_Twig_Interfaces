@@ -1,0 +1,29 @@
+{
+    "/":{
+        "controller":"MainController",
+        "action": "main"
+    },
+    "/listaProductos":{
+        "controller": "listaProductosController",
+        "action": "listaProductos"
+    },
+    "/listaClientes":{
+        "controller": "listaClientesController",
+        "action": "listaClientes"
+    }
+    ,
+    "/detalleCliente":{
+        "controller": "detalleClienteController",
+        "action": "detalleCliente"
+    }
+    ,
+    "/departamentos":{
+        "controller": "departamentosController",
+        "action": "listaDepartamentos"
+    }
+    ,
+    "/pedidos":{
+        "controller": "pedidosController",
+        "action": "listaPedidos"
+    }
+}

@@ -1,0 +1,25 @@
+{% extends "index.html.twig" %}
+{% block content %}
+    {% if resultados is null %}
+        0 results
+        <a href="/lista">Volver</a>
+    {% else %}
+        <table border='1'>
+        <tr>
+            <td>Id</td>
+            <td>Título</td>
+            <td>Descripción</td>
+            <td>Fecha de Creación</td>
+            <td>Fecha de Vencimiento</td>
+        </tr>
+        <tr>
+            <td>{{resultados.id}}</td>
+            <td>{{resultados.titulo|capitalize}}</td>
+            <td>{{resultados.descripcion|capitalize}}</td>
+            <td>{{resultados.fecha_creacion|date('d/m/Y')}}</td>
+            <td>{{resultados.fecha_vencimiento|date('d/m/Y')}}</td>
+        </tr>
+        </table>    
+        <a href="/lista">Volver</a>
+    {% endif %}
+{% endblock %}
